@@ -19,6 +19,10 @@ Route::get('/', function () {
 });
 
 Route::get('test',function(){
+    Browsershot::html('Foo')
+    ->setNodeBinary('/usr/local/bin/node')
+    ->setNpmBinary('/usr/local/bin/npm');
+
     Browsershot::url('https://www.google.com/')
     ->setScreenshotType('jpeg', 100)
     ->save('talha.png');
