@@ -22,6 +22,7 @@ Route::get('test',function(){
 
 
     Browsershot::url('https://www.google.com/')
+
     ->setScreenshotType('jpeg', 100)
-    ->save('talha.png')->setNodeBinary('/usr/bin/node')->setNpmBinary('/usr/bin/npm');
+    ->save('talha.png');
 });
